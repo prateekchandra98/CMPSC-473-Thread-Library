@@ -1,0 +1,6 @@
+user/libthread/rwlock.o: user/libthread/rwlock.c 410user/inc/rwlock.h \
+ user/inc/rwlock_type.h
+
+410user/inc/rwlock.h:
+
+user/inc/rwlock_type.h:

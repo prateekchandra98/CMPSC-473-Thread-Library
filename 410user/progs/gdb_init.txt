@@ -1,0 +1,21 @@
+handle SIGSEGV nostop
+handle SIGSEGV noprint
+add-symbol-file largetest2 0x01000000
+define hook-run
+set confirm off
+symbol-file
+set confirm on
+end
+define start
+set breakpoint pending on
+tbreak main
+set breakpoint pending auto
+r
+end
+break *0x80003a01
+commands
+add-symbol-file largetest2 0x01000000
+enable
+c
+end
+set confirm on

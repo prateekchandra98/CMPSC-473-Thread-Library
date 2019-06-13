@@ -1,0 +1,41 @@
+410user/libthrgrp/thrgrp.o: 410user/libthrgrp/thrgrp.c 410user/inc/cond.h \
+ 410user/inc/mutex.h user/inc/mutex_type.h user/inc/cond_type.h \
+ user/libthread/linked_list.h 410user/libstdlib/stdlib.h \
+ 410user/inc/stddef.h 410user/inc/types.h 410user/inc/malloc.h \
+ 410user/libthrgrp/thrgrp.h 410user/inc/thread.h spec/syscall.h \
+ spec/ureg.h 410user/libstdio/stdio.h 410user/inc/stdarg.h \
+ 410user/libsimics/simics.h 410user/inc/assert.h
+
+410user/inc/cond.h:
+
+410user/inc/mutex.h:
+
+user/inc/mutex_type.h:
+
+user/inc/cond_type.h:
+
+user/libthread/linked_list.h:
+
+410user/libstdlib/stdlib.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/malloc.h:
+
+410user/libthrgrp/thrgrp.h:
+
+410user/inc/thread.h:
+
+spec/syscall.h:
+
+spec/ureg.h:
+
+410user/libstdio/stdio.h:
+
+410user/inc/stdarg.h:
+
+410user/libsimics/simics.h:
+
+410user/inc/assert.h:

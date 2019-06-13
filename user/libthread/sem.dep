@@ -1,0 +1,29 @@
+user/libthread/sem.o: user/libthread/sem.c 410user/inc/sem.h \
+ user/inc/sem_type.h user/inc/cond_type.h user/libthread/linked_list.h \
+ 410user/libstdlib/stdlib.h 410user/inc/stddef.h 410user/inc/types.h \
+ 410user/inc/malloc.h user/inc/mutex_type.h 410user/inc/mutex.h \
+ 410user/inc/cond.h 410user/inc/assert.h
+
+410user/inc/sem.h:
+
+user/inc/sem_type.h:
+
+user/inc/cond_type.h:
+
+user/libthread/linked_list.h:
+
+410user/libstdlib/stdlib.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/malloc.h:
+
+user/inc/mutex_type.h:
+
+410user/inc/mutex.h:
+
+410user/inc/cond.h:
+
+410user/inc/assert.h:

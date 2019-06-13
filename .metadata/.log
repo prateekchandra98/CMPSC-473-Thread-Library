@@ -1,0 +1,114 @@
+!SESSION 2018-04-21 12:45:16.924 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2018-04-21 13:43:20.928
+!MESSAGE Invalid preference page path: Field Assist
+!SESSION 2018-04-26 20:43:25.018 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2018-04-26 20:44:09.456
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2018-04-26 20:44:12.577
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2018-04-26 20:44:12.577
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-26 20:44:12.577
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2018-04-26 20:44:12.578
+!MESSAGE Unable to restore perspective: Workspace - Resource.
+!SUBENTRY 2 org.eclipse.ui 0 0 2018-04-26 20:44:12.578
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2018-04-26 20:44:12.578
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2018-04-26 20:44:12.578
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2018-04-26 20:44:12.578
+!MESSAGE OK
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-26 21:40:30.038
+!MESSAGE An internal error occurred during: "Collecting garbage".
+!STACK 0
+java.lang.OutOfMemoryError: unable to create new native thread
+	at java.lang.Thread.start0(Native Method)
+	at java.lang.Thread.start(Thread.java:714)
+	at java.lang.ref.Finalizer$1.run(Finalizer.java:130)
+	at java.lang.ref.Finalizer$1.run(Finalizer.java:123)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.lang.ref.Finalizer.forkSecondaryFinalizer(Finalizer.java:122)
+	at java.lang.ref.Finalizer.runFinalization(Finalizer.java:146)
+	at java.lang.Runtime.runFinalization0(Native Method)
+	at java.lang.Runtime.runFinalization(Runtime.java:712)
+	at java.lang.System.runFinalization(System.java:1015)
+	at org.eclipse.ui.internal.ide.application.IDEIdleHelper$3.run(IDEIdleHelper.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2018-04-27 13:38:33.063 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2018-04-27 13:38:39.251
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2018-04-27 13:38:41.356
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2018-04-27 13:38:41.356
+!MESSAGE Unable to restore perspective: Workspace - Resource.
+!SUBENTRY 2 org.eclipse.ui 0 0 2018-04-27 13:38:41.356
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2018-04-27 13:38:41.356
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.356
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.357
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.357
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.357
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2018-04-27 13:38:41.357
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2018-04-27 13:38:41.357
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2018-04-27 13:38:41.357
+!MESSAGE OK

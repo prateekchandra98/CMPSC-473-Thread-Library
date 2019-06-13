@@ -1,0 +1,17 @@
+410user/progs/thr_exit_join.o: 410user/progs/thr_exit_join.c \
+ 410user/libstdio/stdio.h 410user/inc/stddef.h 410user/inc/types.h \
+ 410user/inc/stdarg.h 410user/inc/thread.h spec/syscall.h spec/ureg.h
+
+410user/libstdio/stdio.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/stdarg.h:
+
+410user/inc/thread.h:
+
+spec/syscall.h:
+
+spec/ureg.h:

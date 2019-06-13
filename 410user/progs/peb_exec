@@ -1,0 +1,65 @@
+#!/bin/bash
+
+if [ "$1" = "--gdb" ]; then
+	RUN_GDB=1
+	shift
+fi
+
+# --exec lets us specify the file name and argv[0] seperately
+if [ "$1" = "--exec" ]; then
+	FILE="$2"
+	shift 2
+else
+	FILE="$1"
+fi
+
+set -e
+#set -x
+
+ENTRY=$(readelf -h $FILE | grep Entry | cut -dx -f2)
+BINARY_END=$(objdump -t $FILE | grep " _end$" | cut -d" " -f1)
+SIM_CALL=$(objdump -t $FILE | grep " sim_call$" | cut -d" " -f1)
+if [ "z$SIM_CALL" = "z" ]; then
+	SIM_CALL="0"
+fi
+
+#OBJFILE=$(tempfile -p $(basename $FILE))
+OBJFILE=$(mktemp)
+
+objcopy $FILE -O binary $OBJFILE
+
+if [ $RUN_GDB ]; then
+	# SEGFAULTs are used for emulating syscalls
+	echo "set confirm off" >> gdb_init.txt
+	echo "handle SIGSEGV nostop" > gdb_init.txt
+	echo "handle SIGSEGV noprint" >> gdb_init.txt
+	echo "add-symbol-file ${FILE} 0x01000000" >> gdb_init.txt
+
+	# Remove symbol table when starting program
+	echo "define hook-run" >> gdb_init.txt
+	echo "set confirm off" >> gdb_init.txt
+	echo "symbol-file" >> gdb_init.txt
+	echo "set confirm on" >> gdb_init.txt
+	echo "end" >> gdb_init.txt
+
+	# Set deferred main breakpoint when starting
+	echo "define start" >> gdb_init.txt
+	echo "set breakpoint pending on" >> gdb_init.txt
+	echo "tbreak main" >> gdb_init.txt
+	echo "set breakpoint pending auto" >> gdb_init.txt
+	echo "r" >> gdb_init.txt
+	echo "end" >> gdb_init.txt
+
+	# Load user program symbol table once enulation is ready
+	echo "break *0x80003a01" >> gdb_init.txt
+	echo "commands" >> gdb_init.txt
+	echo "add-symbol-file ${FILE} 0x01000000" >> gdb_init.txt
+	echo "enable" >> gdb_init.txt
+	echo "c" >> gdb_init.txt
+	echo "end" >> gdb_init.txt
+
+	echo "set confirm on" >> gdb_init.txt
+	gdb -x gdb_init.txt --args peb_exec_runner $OBJFILE 0x${ENTRY} 0x${BINARY_END} 0x${SIM_CALL} "$@"
+else
+	./peb_exec_runner $OBJFILE 0x${ENTRY} 0x${BINARY_END} 0x${SIM_CALL} "$@"
+fi
